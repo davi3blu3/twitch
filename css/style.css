@@ -23,7 +23,11 @@ li > a:hover {
 
 .row {
 	margin: 3px 0;
-	padding: 6px;
+}
+
+.img-col {
+	height: 45px;
+	padding-left: 0;
 }
 
 .offline {
@@ -36,4 +40,10 @@ li > a:hover {
 
 .channel-status {
 	text-align: center;
+}
+
+.channel-logo {
+	position: relative;
+	max-height: 100%;
+	margin: 0;
 }
