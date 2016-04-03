@@ -13,6 +13,14 @@ header h1 {
 	margin: 0;
 }
 
+li.active > a {
+	background: #DDD !important;
+}
+
+li > a:hover {
+	background: #ABC !important;
+}
+
 .row {
 	margin: 3px 0;
 	padding: 6px;
