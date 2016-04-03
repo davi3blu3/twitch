@@ -1,11 +1,12 @@
 body {
-	
+	background-color: #eee;
 }
 
 header {
-	background-color: #99D;
+	background-color: #0AC;
 	text-align: center;
 	padding: 20px 0;
+	margin-bottom: 3px;
 }
 
 header h1 {
@@ -13,9 +14,16 @@ header h1 {
 }
 
 .row {
-	background-color: #ABD;
 	margin: 3px 0;
 	padding: 6px;
+}
+
+.offline {
+	background-color: #ABC;
+}
+
+.online {
+	background-color: #ACB;
 }
 
 .channel-status {
