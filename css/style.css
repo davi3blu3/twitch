@@ -1,0 +1,23 @@
+body {
+	
+}
+
+header {
+	background-color: #99D;
+	text-align: center;
+	padding: 20px 0;
+}
+
+header h1 {
+	margin: 0;
+}
+
+.row {
+	background-color: #ABD;
+	margin: 3px 0;
+	padding: 6px;
+}
+
+.channel-status {
+	text-align: center;
+}
