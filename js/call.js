@@ -1,14 +1,14 @@
 'use strict';
 
-$(document).ready(function() {
+$(document).ready(function () {
 
     // streaming channels
     var channels = ["freecodecamp", "storbeck", "cretetion", "habathcx", "RobotCaleb", "thomasballinger", "noobs2ninjas", "beohoff", "brunofin", "comster404", "sabercrit", "vinesauce", "exinthevatican", "terakilobyte"];
 
     // make API call for channel status
-    channels.forEach(function(channel) {
+    channels.forEach(function (channel) {
 
-        $.getJSON('https://api.twitch.tv/kraken/streams/' + channel + '?callback=?', function(data) {
+        $.getJSON('https://api.twitch.tv/kraken/streams/' + channel + '?callback=?', function (data) {
 
 
             if (data.stream === null) {
@@ -16,28 +16,28 @@ $(document).ready(function() {
             } else if (data.stream === undefined) {
                 $(".container").append('<div class="row offline"><div class="col-sm-1"></div><div class="col-sm-2"><h4 class="channel-name">' + channel + '</h4></div><div class="col-sm-9"><h4 class="channel-status">Not Found</h4></div></div>');
             } else {
-                 $(".container").append( '<div class="row online"><div class="img-col col-sm-1"><img class="channel-logo" src="' + data.stream.channel.logo + '" alt="freecodecamp logo"/></div><div class="col-sm-2"><h4 class="channel-name">' + data.stream.channel.display_name + '</h4></div><div class="col-sm-9"><h4 class="channel-status">' + data.stream.channel.status + '</h4></div></div>' );
+                $(".container").append('<div class="row online"><div class="img-col col-sm-1"><img class="channel-logo" src="' + data.stream.channel.logo + '" alt="freecodecamp logo"/></div><div class="col-sm-2"><h4 class="channel-name">' + data.stream.channel.display_name + '</h4></div><div class="col-sm-9"><h4 class="channel-status">' + data.stream.channel.status + '</h4></div></div>');
             }
-        })
+        });
     });
 
 
     // control displayed channels via selected tab
-    $("#all-chan-tab").on('click', function() {
+    $("#all-chan-tab").on('click', function () {
         $('.nav-tabs > li').removeClass('active');
         $(this).addClass('active');
         $('.online').show();
         $('.offline').show();
     });
 
-    $("#on-chan-tab").on('click', function() {
+    $("#on-chan-tab").on('click', function () {
         $('.nav-tabs > li').removeClass('active');
         $(this).addClass('active');
         $('.online').show();
         $('.offline').hide();
     });
 
-    $("#off-chan-tab").on('click', function() {
+    $("#off-chan-tab").on('click', function () {
         $('.nav-tabs > li').removeClass('active');
         $(this).addClass('active');
         $('.online').hide();
