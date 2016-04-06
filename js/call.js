@@ -12,11 +12,11 @@ $(document).ready(function () {
 
 
             if (data.stream === null) {
-                $(".container").append('<div class="row offline"><div class="col-sm-1"></div><div class="col-sm-2"><h4 class="channel-name">' + channel + '</h4></div><div class="col-sm-9"><h4 class="channel-status">Offline</h4></div></div>');
+                $(".container").append('<div class="row offline"><div class="col-xs-1"></div><div class="col-xs-2"><h4 class="channel-name">' + channel + '</h4></div><div class="col-xs-9"><h4 class="channel-status">Offline</h4></div></div>');
             } else if (data.stream === undefined) {
-                $(".container").append('<div class="row offline"><div class="col-sm-1"></div><div class="col-sm-2"><h4 class="channel-name">' + channel + '</h4></div><div class="col-sm-9"><h4 class="channel-status">Not Found</h4></div></div>');
+                $(".container").append('<div class="row offline"><div class="col-xs-1"></div><div class="col-xs-2"><h4 class="channel-name">' + channel + '</h4></div><div class="col-xs-9"><h4 class="channel-status">Not Found</h4></div></div>');
             } else {
-                $(".nav").after('<div class="row online"><div class="img-col col-sm-1"><img class="channel-logo" src="' + data.stream.channel.logo + '" alt="freecodecamp logo"/></div><div class="col-sm-2"><h4 class="channel-name">' + data.stream.channel.display_name + '</h4></div><div class="col-sm-9"><h4 class="channel-status">' + data.stream.channel.status + '</h4></div></div>');
+                $(".nav").after('<div class="row online"><div class="img-col col-xs-1"><img class="channel-logo" src="' + data.stream.channel.logo + '" alt="freecodecamp logo"/></div><div class="col-xs-2"><h4 class="channel-name">' + data.stream.channel.display_name + '</h4></div><div class="col-sm-9"><h4 class="channel-status">' + data.stream.channel.status + '</h4></div></div>');
             }
         });
     });
